@@ -1,0 +1,17 @@
+body{
+  background-color: rebeccapurple;
+}
+.scroll{
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+  z-index: -1;
+  scroll-snap-align: start;
+}
+.cont{
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
+  height: 100vh;
+}
