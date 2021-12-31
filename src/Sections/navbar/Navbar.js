@@ -38,7 +38,7 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="https://drive.google.com/file/d/14eq3xeMUREuwfFLaIa3CLeVK1X4KJRl3/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qoUeIAYQvHJ7ftQ8Te_7ozvlrGwpuWyI/view?usp=sharing"
               target="_blank"
             >
               Resume
