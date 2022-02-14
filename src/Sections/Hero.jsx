@@ -4,7 +4,7 @@ import Typical from 'react-typical';
 export default function Hero() {
   return (
     <>
-         <div className="section aboutme" data-anchor="aboutme" style={{height:'100vh'}}>
+         <div className="section aboutme" data-anchor="aboutme" style={{width:'100%'}}>
       <div className="d-flex flex-column justify-content-center mt-8 ff">
       <div className="opaque-bg animated fadeInDown">
       <h1 data-aos="zoom-in-up" data-wow-delay="1.5s">
