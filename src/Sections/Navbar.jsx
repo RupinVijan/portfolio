@@ -9,16 +9,6 @@ const Navbar = () => {
       return document.querySelector(el)
     }
   }
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
@@ -35,12 +25,6 @@ const Navbar = () => {
   }
   window.addEventListener('load', navbarlinksActive)
   window.addEventListener('scroll', navbarlinksActive)
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('body').classList.toggle('mobile-nav-active')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
-
   return (
     <>
       <i className="bi bi-list mobile-nav-toggle d-xl-none"></i>
