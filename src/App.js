@@ -6,7 +6,7 @@ import Hero from "./Sections/Hero";
 import About from "./Sections/About";
 import Skill from "./Sections/Skill";
 import Projects from "./Sections/Projects";
-// import Testimonials from "./Sections/Testimonials";
+import Testimonials from "./Sections/Testimonials";
 import Contact from "./Sections/Contact";
 import Resume from "./Sections/Resume";
 import AOS from 'aos';
@@ -33,7 +33,7 @@ function App() {
     <div id="projects">
     <Projects/>
     </div>
-    {/* <Testimonials/> */}
+    <Testimonials/>
     <div id="contact" data-aos="zoom-in-up" data-wow-delay="1s">
     <Contact/>
     </div>
