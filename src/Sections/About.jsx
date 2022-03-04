@@ -7,7 +7,7 @@ export default function About() {
       <section id="about" className="about">
         <div className="container" data-aos="fade-up">
           <div className="section-title">
-            <h2>About</h2>
+            <h2>About Me</h2>
             {/* <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> */}
           </div>
 
@@ -57,13 +57,7 @@ export default function About() {
                 </div>
               </div>
               <p>
-                I am a MERN Stack Developer and a JavaScript enthusiast and have
-                worked on many technologies of JavaScript like Reactjs, Nextjs,
-                Node.js and many more. I obsess over the backend API creation
-                part in JavaScript and Python both and am passionate in getting
-                computers to more effectively work on your side by freeing you
-                of the burdens of carrying out repetitive tasks through
-                automative processes.
+              I am a MERN Stack Developer and a JavaScript enthusiast. In addition to JavaScript, I've worked with Next.js, Node.js, and React.js. I am particularly passionate about creating Python and JavaScript backend APIs. My passion is making computers more effective on your side by relieving you of repetitive tasks through automotive processes by enabling them to work on your behalf.
               </p>
             </div>
           </div>

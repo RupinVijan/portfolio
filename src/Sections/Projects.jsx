@@ -37,7 +37,7 @@ export default function Projects() {
             <Project img={pro_uvahcare} url="https://uvahcare.in" title="Uvahcare Website" desc="Made this Website using Mongodb,NodeJs and ExpressJs " />
             <Project img={pro_dsc} url="https://dsc.gtbit.org" title="GDSC GTBIT Website" desc="Made this Website Using ReactJs and Redux" />
             <Project img={pro_hand} url="https://github.com/RupinVijan/text-to-handwriting" title="Text to Handwriting" desc="Made this Website using Python and its libraries!" />
-            <Project img={pro_social} url="https://github.com/RupinVijan/The-Social-Gamer" title="Social Media Website" desc="Made this Website Mongodb, ExpressJs, ReactJs & NodeJs" />
+            <Project img={pro_social} url="https://github.com/RupinVijan/The-Social-Gamer" title="Social Media Website" desc="Made this Website using Mongodb, ExpressJs, ReactJs & NodeJs" />
 
 
 

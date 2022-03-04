@@ -199,6 +199,11 @@ body {
     margin-top: 50%;
     color: #0563bb;
 }
+  .ff h2{
+    margin-top: -20px;
+    color: #0563bb;
+    font-weight:bolder;
+}
   
   .opaque-bg {
     margin-left: auto;

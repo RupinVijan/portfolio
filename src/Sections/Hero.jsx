@@ -8,11 +8,11 @@ export default function Hero() {
       <div className="d-flex flex-column justify-content-center mt-8 ff">
       <div className="opaque-bg animated fadeInDown">
       <h1 data-aos="zoom-in-up" data-wow-delay="1.5s">
-            My Name is Rupin <br/>
-            I'm a <Typical
-        steps={['Software Developer', 1000, 'Web Developer', 1001 , 'Learner' , 1002,'Coder',1003]}
+            My Name is Rupin<br/>
+            <p>I'm a</p> <Typical
+        steps={['Software Developer', 2000, 'Web Developer', 2001 , 'Learner' , 1002,'Coder',1003]}
         loop={Infinity}
-        wrapper="p"
+        wrapper="h2"
       /> </h1>
       </div>
       </div>
