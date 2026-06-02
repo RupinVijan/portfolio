@@ -5,8 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Rupin Vijan</title>
+    <title>Rupin Vijan — Software Engineer</title>
     <link rel="icon" href="img/rv.png">
+
+    <!-- SEO + social sharing: a portfolio is meant to be linked and previewed -->
+    <meta name="description"
+        content="Rupin Vijan — Software Engineer specializing in backend and distributed systems: Java, Spring Boot, AWS, event-driven microservices.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rupin Vijan — Software Engineer">
+    <meta property="og:description"
+        content="Backend & distributed-systems engineer. Reactive event-driven platforms, fault-tolerant payments, and search at scale.">
+    <meta property="og:image" content="img/rv.png">
+    <meta name="twitter:card" content="summary">
+
     <link rel="stylesheet" href="stylesheet.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,8 +56,9 @@
                         class="fas fa-times fa-lg" id="close-menu"></i> </label>
                 <div class="menu">
                     <li><a href="#sec2" class="link-about">About</a></li>
+                    <li><a href="#experience" class="link-experience">Experience</a></li>
                     <li><a href="#sec4" class="link-projects">Projects</a></li>
-                    <li><a href="#sec5" class="link-contact">Contact</a></li>
+                    <li class="contact-item"><a href="#sec5" class="link-contact">Contact</a></li>
                 </div>
             </ul>
         </nav>
@@ -60,10 +72,9 @@
                 <span class="title">
                     I'm <span class="pablo">Rupin </span> <br> Vijan
                 </span>
-                <h2 class="subtitle">SOFTWARE DEVELOPER</h2>
+                <h2 class="subtitle">SOFTWARE ENGINEER</h2>
                 <!--<h3 class="quote"> { I code for the future }</h3>-->
-                <a href="https://drive.google.com/file/d/17bmsJbLfwLCn4wX9G9ltpA1HlO8WPvfE/view?usp=sharing"
-                    target="_blank"><button class="btn">Resume
+                <a href="cv/Rupin-Vijan-Resume.pdf" target="_blank"><button class="btn">Resume
                         <i class="fa-solid fa-arrow-right" id="cv-icon"></i></button></a>
             </span>
 
@@ -540,10 +551,11 @@
                 <br>
                 <p>
 
-                    I am a MERN Stack Developer and a JavaScript enthusiast. In addition to JavaScript, I've worked with
-                    Next.js, Node.js, and React.js. I am particularly passionate about creating Python and JavaScript
-                    backend APIs. My passion is making computers more effective on your side by relieving you of
-                    repetitive tasks through automotive processes by enabling them to work on your behalf.
+                    I'm a Software Engineer focused on backend and distributed systems. At Belzabar I architect
+                    reactive, event-driven platforms in Java and Spring Boot on AWS — fault-tolerant payment pipelines,
+                    hybrid search on Elasticsearch, and microservices that process millions of real-time events. I love
+                    the hard parts: tuning JVM memory, query plans, and caching so systems stay fast and correct under
+                    load, and building native tooling that quietly makes everything cheaper and quicker.
                 </p>
                 <br>
                 <div class="innovator">
@@ -568,52 +580,106 @@
         <!--<div class="blur-effect"> -->
         <h1 class="skills-title">Skills</h1>
         <div class="line"></div>
+        <!-- Backend / distributed-systems stack. IDs (#java, #android, #skill-two-left/right)
+             and the skill-one/two/three classes are animated by GSAP in main.js — keep them. -->
         <div class="skills-container">
             <div class="skill-item">
                 <div class="skill-one java" id="java">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                        alt="Java">
                 </div>
             </div>
             <div class="skill-item" id="skill-two-left">
                 <div class="skill-two sql">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/640px-MongoDB_Logo.svg.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                        alt="Spring Boot">
                 </div>
-                <div class="skill-two">
-                    <img src="img/mysql.png">
+                <div class="skill-two kafka skill-invert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                        alt="Apache Kafka">
                 </div>
             </div>
             <div class="skill-item">
-                <div class="skill-three">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png?20170401104355">
+                <div class="skill-three aws skill-invert">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                        alt="Amazon Web Services">
                 </div>
                 <div class="skill-three">
-                    <img src="img/js.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                        alt="Kubernetes">
                 </div>
                 <div class="skill-three html">
-                    <img src="img/html.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="PostgreSQL">
                 </div>
             </div>
             <div class="skill-item" id="skill-two-right">
                 <div class="skill-two flutter">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg"
+                        alt="Elasticsearch">
                 </div>
                 <div class="skill-two csharp">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg/640px-Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker">
                 </div>
             </div>
             <div class="skill-item">
                 <div class="skill-one" id="android">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Docker-svgrepo-com.svg/640px-Docker-svgrepo-com.svg.png">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                        alt="Node.js">
                 </div>
             </div>
         </div>
 
+    </section>
+
+    <section class="sec-exp" id="experience">
+        <h1 class="skills-title">Experience</h1>
+        <div class="line"></div>
+
+        <div class="timeline">
+            <div class="exp-item">
+                <div class="exp-head">
+                    <h2 class="exp-role">Software Engineer</h2>
+                    <span class="exp-company">Belzabar</span>
+                    <span class="exp-when">Aug 2023 — Present · Delhi, India</span>
+                </div>
+                <ul class="exp-points">
+                    <li>Architected a reactive, event-driven hybrid search platform (Java, Spring Boot, Elasticsearch)
+                        for a 360° customer view — cut query latency 30% through JVM and connection-pool tuning.</li>
+                    <li>Engineered a fault-tolerant payment system handling $500K+ monthly with AWS SQS and Lambda and
+                        event-driven messaging, guaranteeing exactly-once processing.</li>
+                    <li>Optimized PostgreSQL with execution-plan analysis and composite indexing — 40% lower CPU at peak
+                        — shipping on AWS ECS with Docker/Kubernetes CI/CD.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-head">
+                    <h2 class="exp-role">Fellow — Maker Expert</h2>
+                    <span class="exp-company">Nasscom Foundation</span>
+                    <span class="exp-when">Nov 2022 — Jul 2023 · Noida, India</span>
+                </div>
+                <ul class="exp-points">
+                    <li>Consulted 50+ startups on scalable backend architecture, NoSQL vs relational schema design, and
+                        AWS / GCP cloud migration.</li>
+                    <li>Refactored legacy codebases into microservice and MVC architectures, speeding up MVP launches.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-head">
+                    <h2 class="exp-role">Software Developer Intern</h2>
+                    <span class="exp-company">PlyPicker</span>
+                    <span class="exp-when">Sep 2022 — Nov 2022 · Pune, India</span>
+                </div>
+                <ul class="exp-points">
+                    <li>Built responsive RESTful APIs (Node.js, MongoDB) with aggregation pipelines for complex filtering
+                        and reporting.</li>
+                    <li>Secured sensitive customer data with JWT authentication and role-based access control (RBAC).</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section class="sec4" id="sec4">
@@ -636,21 +702,23 @@
 
                     <div class="one">
                         <h2>01</h2>
-                        <h1 class="card-title">Shram</h1>
-                        <p class="card-description">Shram is a cross-platform tool that helps organisations manage their
-                            work and team both, while having fun. It also adapts to the needs of growing organisations
-                            by allowing them to expand as decentralised and autonomous pods.
+                        <h1 class="card-title">Shram AI</h1>
+                        <p class="card-description">A cross-platform productivity tool that helps teams manage work and
+                            stay in flow. I engineered its native macOS module in Swift on the Accessibility API to read
+                            on-screen context — replacing third-party OCR, cutting data costs 60% and latency 200ms.
+                            Top 2 Product on Product Hunt.
                         </p>
                     </div>
                     <div class="two">
                         <div class="card-tech">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/640px-React-icon.svg.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png?20170401104355">
-                            <img src="img/mysql.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"
+                                alt="Swift">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg"
+                                alt="Electron.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                                alt="TypeScript">
                         </div>
                         <a href="https://shram.io">Visit project</a>
                     </div>
@@ -672,21 +740,23 @@
                     <div class="one second">
                         <h2>02</h2>
                         <h1 class="card-title">Satyug</h1>
-                        <p class="card-description">Satyug is an interactive Mini-Game App to connect a billion users to
-                            their roots, tradition, and culture, using the power of Religious Storytelling and Virtual
-                            Metaverse Darshans.
+                        <p class="card-description">An interactive mini-game platform connecting a billion users to their
+                            roots and culture through religious storytelling and metaverse darshans — powered by a
+                            low-latency, event-driven game server tuned for real-time user state and high read/write
+                            throughput.
                         </p>
                     </div>
                     <div class="two second">
                         <div class="card-tech">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg/640px-Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png?20170401104355">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Ethereum_Classic_Matte_Circle_logo.png/640px-Ethereum_Classic_Matte_Circle_logo.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png">
+                            <img class="inv"
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                                alt="Next.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                alt="Redis">
                         </div>
                         <a href="https://satyug.life">Visit project</a>
                     </div>
@@ -697,29 +767,35 @@
                 <div class="card-text">
                     <div class="one">
                         <h2>03</h2>
-                        <h1 class="card-title">Infobility</h1>
-                        <p class="card-description">Infobility team is composed of Graphic Designers and Full Stack
-                            developers. Our creative Team members take the highest level of pride in their work.
+                        <h1 class="card-title">Digital Ram Mandir</h1>
+                        <p class="card-description">A viral devotional web platform officially promoted by the Government
+                            during the UP &amp; Bihar election campaigns. I architected a resilient,
+                            horizontally-scalable content delivery system to absorb massive concurrent traffic spikes
+                            during live events.
                         </p>
                     </div>
                     <div class="two">
                         <div class="card-tech">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg/640px-Cib-next-js_%28CoreUI_Icons_v1.0.0%29.svg.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1180px-Node.js_logo.svg.png?20170401104355">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/640px-MongoDB_Logo.svg.png">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/640px-Amazon_Web_Services_Logo.svg.png">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                alt="React">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                alt="Node.js">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                                alt="Redis">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                alt="MongoDB">
                         </div>
-                        <a href="https://infobility.ca">Visit project</a>
+                        <!-- No public live URL; placeholder points to GitHub — replace with the real link if available -->
+                        <a href="https://github.com/RupinVijan">Visit project</a>
                     </div>
                 </div>
                 <div class="card-image">
-                    <img class="project" src="img/infobility.png">
-
-                    <img class="project" src="img/infobility.png">
+                    <!-- Gradient poster placeholder (no screenshot asset yet). Single child + scoped CSS
+                         (.card.three .card-image .project.poster) neutralizes the two-image hover swap. -->
+                    <div class="project poster">
+                        <span class="poster-emoji">🛕</span>
+                        <strong>Digital Ram&nbsp;Mandir</strong>
+                    </div>
                 </div>
             </div>
         </div>
@@ -756,10 +832,11 @@
                 <div class="elements">
                     <div class="logo-footer"> <img style="filter:invert(1);" src="img/rv.png"> </div>
                     <a href="#sec2">About </a>
+                    <a href="#experience">Experience </a>
                     <a href="#sec4">Projects </a>
                 </div>
                 <div class="copyright">
-                    <h2>© 2022 Rupin Vijan. All rights reserved.</h2>
+                    <h2>© 2026 Rupin Vijan. All rights reserved.</h2>
                 </div>
             </div>
 
@@ -783,7 +860,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
 
-</body>
 </body>
 
 </html>

@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 if (window.innerWidth <= 800) {
 
-  let menu = [document.querySelector('.link-about'), document.querySelector('.link-projects'), document.querySelector('.link-contact')];
+  let menu = [document.querySelector('.link-about'), document.querySelector('.link-experience'), document.querySelector('.link-projects'), document.querySelector('.link-contact')];
 
   menu.forEach(item =>
     item.addEventListener('click', function () {

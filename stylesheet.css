@@ -96,7 +96,10 @@ a {
 }
 
 .items{
-    width: 28%;
+    /* WHY: width was a fixed 28%; with a 4th nav item (Experience) the no-wrap
+       menu overflowed past the viewport. auto lets the container size to its
+       content while the navbar's space-between keeps it right-aligned. */
+    width: auto;
 }
 
 .menu {
@@ -126,7 +129,7 @@ a {
     color: #75788c;
 }
 
-/*.menu li:nth-child(3){
+/*.menu li.contact-item{
       background-color: #300cff; 
       color: white; 
       padding: 2% 3% 2% 3%;
@@ -185,24 +188,24 @@ a {
     color: #fff !important;
 }
 
-.menu li:nth-child(3){
+.menu li.contact-item{
  
     color:#fff !important;
 }
 
 
-.menu li:nth-child(3) a:hover {
+.menu li.contact-item a:hover {
     transition: none !important;
 
 }
 
-.menu li:nth-child(3)::after {
+.menu li.contact-item::after {
     content: none !important;
     transition: none !important;
 }
 
 
-.menu li:nth-child(3) a:hover {
+.menu li.contact-item a:hover {
     transition: none !important;
 
 }
@@ -657,7 +660,10 @@ canvas {
     position: relative;
     left: 0;
     top: 0;
-    background: url(img/blueda.gif);
+    /* WHY: original img/blueda.gif was deleted from the repo; giphy.gif is the
+       surviving animated asset, so the hero block keeps its fourth tile. */
+    background: url(img/giphy.gif);
+    background-size: cover;
     filter: saturate(1.5);
     width: 90%;
     height: 30%;
@@ -1876,6 +1882,140 @@ footer .content {
 }
 
 
+/* ---- Icon legibility: invert dark monochrome logos so they read on dark tiles/cards ---- */
+.skill-invert img {
+    /* WHY: the Apache Kafka and AWS wordmarks are near-black and vanish on the
+       #1d212b skill tiles; inverting renders them light against the dark background. */
+    filter: invert(1) brightness(1.05);
+}
+
+.card-tech img.inv {
+    /* WHY: the Next.js logo is solid black; invert it where it sits on a dark card. */
+    filter: invert(1);
+}
+
+
+/* ---- Project card 3: gradient poster (placeholder until a real screenshot exists) ---- */
+.card.three .card-image .project.poster {
+    /* WHY: this card has no image asset, so force-show its single poster child —
+       otherwise the global two-image hover-swap rules (.project:nth-child) hide it. */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    text-align: center;
+    padding: 8%;
+    color: #fff;
+    background: linear-gradient(140deg, #300cff 0%, #2706e2 55%, #1a01a7 100%);
+}
+
+.card.three .card-image .project.poster .poster-emoji {
+    font-size: 4vw;
+    line-height: 1;
+}
+
+.card.three .card-image .project.poster strong {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    letter-spacing: 0.04em;
+}
+
+
+/* ---- EXPERIENCE SECTION ---- */
+.sec-exp {
+    width: 100%;
+    background: #090b11;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 3% 0 7% 0;
+    scroll-margin-top: 90px;
+    /* WHY: clears the fixed mobile navbar when jumping to #experience */
+}
+
+.timeline {
+    width: 60%;
+    margin: 4% auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    border-left: 2px solid #300cff;
+    padding-left: 3%;
+}
+
+.exp-item {
+    position: relative;
+    background: #1d212b;
+    border-radius: 18px;
+    padding: 2.2% 3%;
+    transition: all 0.2s ease-in;
+}
+
+.exp-item::before {
+    content: '';
+    position: absolute;
+    left: -3.6%;
+    top: 2.2rem;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #300cff;
+    box-shadow: 0 0 0 4px #090b11;
+}
+
+.exp-item:hover {
+    background: #20283a;
+    transform: translateX(6px);
+}
+
+.exp-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6vh 1vw;
+    margin-bottom: 1.4vh;
+}
+
+.exp-role {
+    color: #fff;
+    font-size: 1.4vw;
+    font-weight: 700;
+}
+
+.exp-company {
+    color: #7d85f1;
+    font-size: 1.2vw;
+    font-weight: 600;
+}
+
+.exp-when {
+    color: #75788c;
+    font-size: 0.95vw;
+    font-weight: 400;
+    margin-left: auto;
+}
+
+.exp-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-points li {
+    color: #aeb2c4;
+    font-size: 0.95vw;
+    line-height: 1.6;
+    padding-left: 1.4vw;
+    margin-bottom: 0.8vh;
+    position: relative;
+}
+
+.exp-points li::before {
+    content: '▹';
+    color: #300cff;
+    position: absolute;
+    left: 0;
+}
 
 
 /*  ********************* MOBILE ***************************************** */
@@ -1965,7 +2105,7 @@ footer .content {
         color: #75788c !important;
     }
 
-    .menu li:nth-child(3)::after {
+    .menu li.contact-item::after {
         content: none !important;
     }
 
@@ -2633,5 +2773,56 @@ footer .content {
     }
 
 
+    /* ---- EXPERIENCE (mobile) ---- */
+    .sec-exp {
+        padding: 20% 0 14% 0;
+    }
+
+    .sec-exp .line {
+        width: 10vw;
+    }
+
+    .timeline {
+        width: 86%;
+        padding-left: 6%;
+        gap: 3vh;
+    }
+
+    .exp-item {
+        padding: 5% 6%;
+    }
+
+    .exp-item::before {
+        left: -7.7%;
+        top: 6%;
+    }
+
+    .exp-role {
+        font-size: 5vw;
+    }
+
+    .exp-company {
+        font-size: 4.2vw;
+    }
+
+    .exp-when {
+        font-size: 3.4vw;
+        margin-left: 0;
+        flex-basis: 100%;
+    }
+
+    .exp-points li {
+        font-size: 3.6vw;
+        padding-left: 5vw;
+        margin-bottom: 1.4vh;
+    }
+
+    .card.three .card-image .project.poster .poster-emoji {
+        font-size: 16vw;
+    }
+
+    .card.three .card-image .project.poster strong {
+        font-size: 5vw;
+    }
 
 }
